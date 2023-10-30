@@ -1,4 +1,4 @@
-![To-Do list app image](<images/Screenshot 2023-10-30 113117.png>)
+![Screenshot 2023-10-30 113117](https://github.com/EmmyRecent/To-do-app/assets/103508005/10e2cccb-42ef-43af-b25b-4d943de71c0b)
 
 ---
 
