@@ -20,6 +20,8 @@ function addTask() {
 
   // returns and empty "" when ever a List is been added
   inputBox.value = "";
+  // calling the saveData function
+  saveData();
 }
 
 // click event on the lists
@@ -30,9 +32,22 @@ listContainer.addEventListener(
     // note: target element should be in capital letters
     if (e.target.tagName === "LI") {
       e.target.classList.toggle("checked");
+      saveData();
     } else if (e.target.tagName === "SPAN") {
       e.target.parentElement.remove();
+      saveData();
     }
   },
   false
 );
+
+// saving data on local storage and in the browser
+function saveData() {
+  localStorage.setItem("data", listContainer.innerHTML);
+}
+
+// show data whenever browser is opened or reloaded 
+function showTask() {
+  listContainer.innerHTML = localStorage.getItem("data");
+}
+showTask();
